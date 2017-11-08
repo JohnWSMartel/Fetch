@@ -10,8 +10,7 @@ var displayData = function (data)
 	document.querySelector('body').appendChild(ul)
 }
 var loadedData
-fetch( "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json" ).then( result => {return result.json()}).then( parsedJSON => {console.log( parsedJSON )})
-
+fetch( "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json" ).then( result => {return result.json()}).then( parsedJSON => {displayData(loadedData),draw()})
 /*var xhr = new XMLHttpRequest()
 xhr.addEventListener( "load", ()=> 
 	{
